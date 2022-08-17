@@ -1,0 +1,148 @@
+<meta charset="utf-8">
+<style>
+	body{
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		background-color: lightgrey;
+	}
+	button{
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		border-radius: 2rem;
+	}
+	h1{
+		text-align: center;
+		background-color: #EEEEEE;
+
+	}
+</style>
+<body>
+<h1>CODIFICADOR</h1>
+<br>
+<br>
+<br>
+<input style="width: 1000px">
+<br>
+<br>
+<button id="encript">Encriptar</button>
+<br>
+<br>
+<button id="descript">Descriptar</button>
+<div id="imprimir"></div>
+</body>
+
+<script>
+	
+	var lista = []; //Lista donde se va a ingresar con la funcion deslistar y enlistar caracteres
+
+	var entrada = document.querySelector("input"); //Toma entrada de input
+
+	var encript = document.querySelector("#encript"); //Boton encriptador
+	encript.onclick = enlistar;
+
+	var descript = document.querySelector("#descript"); //Boton desencriptador
+	descript.onclick = deslistar;
+
+	//Enlistar  y encriptar
+	function enlistar(){
+
+		var contador = entrada.value.length; //Cuenta la cantidad de caracteres
+		
+			for (var i = 0; i <= contador; i++){ //Ingresa caracteres a lista con bucle
+
+				lista.push(entrada.value[i])
+			}
+
+		for (var i = 0; i <= contador; i++){ //Compara cada letra de la lista y si coincide la remplaza por el nuevo valor asignado
+
+			if(lista[i] == "a"){
+
+				lista[i] = "ai"
+
+			}
+
+			if(lista[i] == "e"){
+
+				lista[i] = "enter"
+
+			}
+
+			if(lista[i] == "i"){
+
+				lista[i] = "imes"
+
+			}
+
+			if(lista[i] == "o"){
+
+				lista[i] = "ober"
+
+			}
+			if(lista[i] == "u"){
+
+				lista[i] = "ufat"
+
+			}
+		}
+		alert(lista.join("")); //Pasa a string y muestra alerta
+		lista = []; //Vacia la lista
+		entrada.value = ""; //Reestablece a vacio el valor del input
+		entrada.focus(); //Se selecciona autamaticamente el input
+	}
+
+	//Descriptar y pasar a string
+	function deslistar(){
+
+		var palabra = entrada.value;
+		var contador = palabra.length;
+
+		for(var i = 0; i <= contador; i++){ //Bucle donde buscara las vocales 
+
+				if (palabra[i] == "a"){
+
+					lista.push("a")
+					i = i + 2 //Su valor aumenta en 2 porque la cadena de encriptacion para la vocal tiene 2 espacios de caracteres
+
+				}
+
+				if (palabra[i] == "e"){
+
+					lista.push("e")
+					i = i + 5
+
+					
+				}
+
+				if (palabra[i] == "i"){
+
+					lista.push("i")
+					i = i + 4
+					
+				}
+
+				if (palabra[i] == "o"){
+
+					lista.push("o")
+					i = i + 4
+					
+				}
+
+				if (palabra[i] == "u"){
+
+					lista.push("u")
+					i = i + 4
+					
+				}
+
+			lista.push(palabra[i]);
+
+				
+		}
+		alert(lista.join("")); //Pasa a string y muestra alerta
+		lista = []; //Vacio de lista
+		entrada.value = ""; //Reestablece a vacio el valor del input
+		entrada.focus(); //Se selecciona autamaticamente el input
+
+
+	}
+
+</script>
+
