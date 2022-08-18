@@ -96,63 +96,144 @@
 
 		for(var i = 0; i <= contador; i++){ //Bucle donde buscara las vocales 
 
-				if (i == 0){
-					true;
-
-				} else {
-					
-				}
 				if (palabra[i] == "a"){
 
 					lista.push("a")
-					i = i + 2 //Su valor aumenta en 2 porque la cadena de encriptacion para la vocal tiene 2 espacios de caracteres
+					i = i + 2; //Su valor aumenta en 2 porque la cadena de encriptacion para la vocal tiene 2 espacios de caracteres
 
-
+						if (palabra[i] == "a"){
+									lista.push("a")
+									i = i + 2;
+						}
+						if (palabra[i] == "e"){
+									lista.push("e")
+									i = i + 5;
+						}
+						if (palabra[i] == "i"){
+									lista.push("i")
+									i = i + 4;
+						}
+						if (palabra[i] == "o"){
+									lista.push("o")
+									i = i + 4;
+						}
+						if (palabra[i] == "u"){
+									lista.push("u")
+									i = i + 4;
+						}
 				}
 
 				if (palabra[i] == "e"){
 
 					lista.push("e")
-					i = i + 5
-					
+					i = i + 5;
+						if (palabra[i] == "a"){
+									lista.push("a")
+									i = i + 2;
+						}
+						if (palabra[i] == "e"){
+									lista.push("e")
+									i = i + 5;
+						}
+						if (palabra[i] == "i"){
+									lista.push("i")
+									i = i + 4;
+						}
+						if (palabra[i] == "o"){
+									lista.push("o")
+									i = i + 4;
+						}
+						if (palabra[i] == "u"){
+									lista.push("u")
+									i = i + 4;
+						}
 				}
 
 				if (palabra[i] == "i"){
 
 					lista.push("i")
-					i = i + 4			
-					if (palabra[i] == "e"){
-								lista.push("e")
-								i = i + 5;
-
-							}
-					
+					i = i + 4;
+						if (palabra[i] == "a"){
+									lista.push("a")
+									i = i + 2;
+						}
+						if (palabra[i] == "e"){
+									lista.push("e")
+									i = i + 5;
+						}
+						if (palabra[i] == "i"){
+									lista.push("i")
+									i = i + 4;
+						}
+						if (palabra[i] == "o"){
+									lista.push("o")
+									i = i + 4;
+						}
+						if (palabra[i] == "u"){
+									lista.push("u")
+									i = i + 4;
+						}
 					
 				}
 
 				if (palabra[i] == "o"){
 
 					lista.push("o")
-					i = i + 4
-					
+					i = i + 4;
+						if (palabra[i] == "a"){
+									lista.push("a")
+									i = i + 2;
+						}
+						if (palabra[i] == "e"){
+									lista.push("e")
+									i = i + 5;
+						}
+						if (palabra[i] == "i"){
+									lista.push("i")
+									i = i + 4;
+						}
+						if (palabra[i] == "o"){
+									lista.push("o")
+									i = i + 4;
+						}
+						if (palabra[i] == "u"){
+									lista.push("u")
+									i = i + 4;
+						}
 				}
 
 				if (true){ //Necesito que esta condicion siempre se cumpla porque por alguna razon en la palabra "qufatenter" al ser descriptado lo hacia con error. 
 					if (palabra[i] == "u"){
 						lista.push("u")
-						i = i + 4
+						i = i + 4;
+							if (palabra[i] == "a"){
+										lista.push("a")
+										i = i + 2;
+							}
 							if (palabra[i] == "e"){
-								lista.push("e")
-								i = i + 5;
-
+										lista.push("e")
+										i = i + 5;
+							}
+							if (palabra[i] == "i"){
+										lista.push("i")
+										i = i + 4;
+							}
+							if (palabra[i] == "o"){
+										lista.push("o")
+										i = i + 4;
+							}
+							if (palabra[i] == "u"){
+										lista.push("u")
+										i = i + 4;
 							}
 					
 					}
 				}
 
-			lista.push(palabra[i]);
-
-				
+				if (palabra[i] == undefined){
+					break;
+				}
+				lista.push(palabra[i]);
 		}
 		alert(lista.join("")); //Pasa a string y muestra alerta
 		lista = []; //Vacio de lista
