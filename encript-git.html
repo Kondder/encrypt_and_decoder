@@ -107,6 +107,7 @@
 					lista.push("a")
 					i = i + 2 //Su valor aumenta en 2 porque la cadena de encriptacion para la vocal tiene 2 espacios de caracteres
 
+
 				}
 
 				if (palabra[i] == "e"){
@@ -119,7 +120,13 @@
 				if (palabra[i] == "i"){
 
 					lista.push("i")
-					i = i + 4
+					i = i + 4			
+					if (palabra[i] == "e"){
+								lista.push("e")
+								i = i + 5;
+
+							}
+					
 					
 				}
 
