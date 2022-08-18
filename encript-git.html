@@ -96,6 +96,12 @@
 
 		for(var i = 0; i <= contador; i++){ //Bucle donde buscara las vocales 
 
+				if (i == 0){
+					true;
+
+				} else {
+					
+				}
 				if (palabra[i] == "a"){
 
 					lista.push("a")
@@ -107,7 +113,6 @@
 
 					lista.push("e")
 					i = i + 5
-
 					
 				}
 
@@ -125,11 +130,17 @@
 					
 				}
 
-				if (palabra[i] == "u"){
+				if (true){ //Necesito que esta condicion siempre se cumpla porque por alguna razon en la palabra "qufatenter" al ser descriptado lo hacia con error. 
+					if (palabra[i] == "u"){
+						lista.push("u")
+						i = i + 4
+							if (palabra[i] == "e"){
+								lista.push("e")
+								i = i + 5;
 
-					lista.push("u")
-					i = i + 4
+							}
 					
+					}
 				}
 
 			lista.push(palabra[i]);
