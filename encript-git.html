@@ -90,9 +90,8 @@
 
 	//Descriptar y pasar a string
 	function deslistar(){
-
 		var palabra = entrada.value;
-		var contador = palabra.length;
+		var contador = palabra.length + 1;
 
 		for(var i = 0; i <= contador; i++){ //Bucle donde buscara las vocales 
 
@@ -234,6 +233,8 @@
 					break;
 				}
 				lista.push(palabra[i]);
+
+				
 		}
 		alert(lista.join("")); //Pasa a string y muestra alerta
 		lista = []; //Vacio de lista
