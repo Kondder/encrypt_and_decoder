@@ -5,10 +5,18 @@
     line-height: 150%;
 }
 
+h1{
+    display: inline;
+}
+header {
+    display:inline-block;
+    flex-direction: row;
+}
+
 body{
 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: lightgrey;
+    background-color: #FFF;
 
 }
 
@@ -29,9 +37,9 @@ main {
     position: relative;
     margin-top: 20px;
     margin-left: 90px;
-    /*background-image: url("imagenes/muñeco.png");
+    background-image: url("imagenes/muñeco.png");
     background-repeat: no-repeat;
-    background-position: 18px;*/
+    background-position: 18px;
     background-size: 300px;
 
 }
